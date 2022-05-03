@@ -7,7 +7,7 @@ docker run -d \
     -v /selfsigned.pem:/etc/ssl/certs/ssl-cert-snakeoil.pem \
     -v /selfsigned.key:/etc/ssl/private/ssl-cert-snakeoil.key \
     -v /lib/modules:/lib/modules \
-    -p 22:22 \
+    -p 2222:22 \
     -p 443:443 \
     foltik/vyos:rolling-latest \
     /sbin/init
