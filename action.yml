@@ -3,3 +3,4 @@ description: 'Start a VyOS instance'
 runs:
   using: docker
   image: Dockerfile
+  options: '--privileged -v /lib/modules:/lib/modules -p 443:443'

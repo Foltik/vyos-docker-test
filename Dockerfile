@@ -1,9 +1,7 @@
-FROM docker:stable
+FROM foltik/vyos:rolling-latest
 
-COPY config.boot /config.boot
-COPY selfsigned.pem /selfsigned.pem
-COPY selfsigned.key /selfsigned.key
+COPY config.boot /opt/vyatta/etc/config.boot.default
+COPY selfsigned.pem /etc/ssl/certs/ssl-cert-snakeoil.pem
+COPY selfsigned.key /etc/ssl/private/ssl-cert-snakeoil.key
 
-COPY vyos.sh /vyos.sh
-RUN chmod +x /vyos.sh
-ENTRYPOINT ["/vyos.sh"]
+ENTRYPOINT ["/sbin/init"]
