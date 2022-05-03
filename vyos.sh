@@ -1,5 +1,12 @@
 #!/bin/sh
 
+echo ">>> config.boot"
+cat /config.boot
+echo ">>> selfsigned.pem"
+cat /selfsigned.pem
+echo ">>> selfsigned.key"
+cat /selfsigned.key
+
 echo "Starting VyOS container"
 docker run -d \
     --name vyos \
