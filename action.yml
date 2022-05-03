@@ -1,0 +1,5 @@
+name: VyOS
+description: 'Start a VyOS instance'
+runs:
+  using: docker
+  image: Dockerfile
